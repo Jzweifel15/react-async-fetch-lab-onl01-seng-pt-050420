@@ -5,7 +5,7 @@ class App extends React.Component {
     peopleInSpace: []
   }
 
-  componentDidMount = () => {
+  componentDidMount = () =>
     fetch("http://api.open-notify.org/astros.json")
       .then(resp => resp.json())
       .then(data => {
@@ -13,7 +13,7 @@ class App extends React.Component {
           peopleInSpace: data.people
         })
       })
-  }
+  
 
   render() {
     return (
